@@ -6,7 +6,7 @@
 /*   By: slouham <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:00:13 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/11 15:00:19 by slouham          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:50:25 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	total_size = count * size;
-	if(count > 0 && SIZE_MAX / count < size)
-	    return NULL;
+	if (count > 0 && SIZE_MAX / count < size)
+		return (NULL);
 	ptr = malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);

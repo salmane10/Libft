@@ -6,7 +6,7 @@
 /*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:01:49 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/11 15:28:26 by slouham          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:58:50 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	// while (i < len)
-	// {
-	// 	ptr[i] = s1[start + i];
-	// 	i++;
-	// }
 	ft_strlcpy(ptr, s1, len);
-	// ptr[i] = '\0';
 	return (ptr);
 }

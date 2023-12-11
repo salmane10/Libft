@@ -6,7 +6,7 @@
 /*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:54:19 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/11 16:28:03 by slouham          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:52:01 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s = src;
 
 	d = dest;
-	if(!dest && !src)
+	if (!dest && !src)
 		return (NULL);
 	while (n-- > 0)
 	{
