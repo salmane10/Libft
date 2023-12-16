@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slouham <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: salman <salman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:56:16 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/11 14:56:18 by slouham          ###   ########.fr       */
+/*   Updated: 2023/12/15 17:00:37 by salman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_occurrence = NULL;
+	int	i;
 
-	while (*s != '\0')
+	i = ft_strlen(s);
+	while (i != 0 || s[i] == (char)c)
 	{
-		if (*s == (char)c)
-			last_occurrence = s;
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return ((char *)last_occurrence);
+	return (NULL);
 }
