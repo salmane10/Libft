@@ -28,11 +28,11 @@ static int	ft_check(char const *s, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*p;
-	int		i;
-	int		l;
-	int		j;
-	
+	char *p;
+	int i;
+	int l;
+	int j;
+
 	if (!s1 || !set)
 		return (NULL);
 	i = 0;
