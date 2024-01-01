@@ -28,10 +28,10 @@ static int	ft_check(char const *s, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *p;
-	int i;
-	int l;
-	int j;
+	char	*p;
+	int		i;
+	int		l;
+	int		j;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -48,11 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	j = 0;
 	while (i < l)
-	{
-		p[j] = s1[i];
-		j++;
-		i++;
-	}
+		p[j++] = s1[i++];
 	p[j] = '\0';
 	return (p);
 }
