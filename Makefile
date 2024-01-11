@@ -23,7 +23,7 @@ SRC =	ft_atoi.c ft_isascii.c ft_memcmp.c \
 		ft_strlcat.c ft_strnstr.c ft_toupper.c \
 		ft_isalpha.c ft_memchr.c ft_split.c \
 		ft_putchar_fd.c ft_strchr.c \
-		ft_strlcpy.c ft_strrchr.c \
+		ft_strlcpy.c ft_strrchr.c 
 
 CC = cc
 
@@ -36,8 +36,8 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rc $@ $(OBJ)
 
-$(OBJ) : $(SRC)
-	$(CC) $(CFLAGS) -c $(SRC)
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
 	rm -f $(OBJ)
@@ -48,3 +48,4 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
+//.SECONDARY : ...
