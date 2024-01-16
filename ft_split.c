@@ -6,7 +6,7 @@
 /*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:02:53 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/19 15:44:51 by slouham          ###   ########.fr       */
+/*   Updated: 2024/01/16 11:42:39 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,18 @@ static size_t	words_count(char *s, char c)
 	return (counter);
 }
 
-static void	free_sub(char **sub_str, size_t j)
+static char	**free_sub(char **sub_str, size_t j)
 {
-	while (j > 0)
-		free(sub_str[--j]);
+	size_t	i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(sub_str[i]);
+		i++;
+	}
 	free(sub_str);
+	return (NULL);
 }
 
 static char	*fill_sub(char *dest, const char *src, size_t len)
@@ -73,7 +80,7 @@ static char	**splited(char **sub_str, const char *s, char c, size_t sub_count)
 		}
 		sub_str[j] = (char *)malloc((len + 1) * sizeof(char));
 		if (!sub_str[j])
-			free_sub(sub_str, j);
+			return (free_sub(sub_str, j));
 		fill_sub(sub_str[j], &s[i - len], len);
 		len = 0;
 		j++;

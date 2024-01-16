@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slouham <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:53:32 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/11 14:53:34 by slouham          ###   ########.fr       */
+/*   Updated: 2024/01/16 11:43:54 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
-	unsigned char	uc;
+	size_t			i;
 
-	ptr = s;
-	uc = (unsigned char)c;
-	while (n-- > 0)
-	{
-		*ptr++ = uc;
-	}
+	i = 0;
+	while (i < n)
+		*(unsigned char *)(s + i++) = (unsigned char)c;
 	return (s);
 }

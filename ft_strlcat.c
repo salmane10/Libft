@@ -6,7 +6,7 @@
 /*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:55:18 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/19 13:39:35 by slouham          ###   ########.fr       */
+/*   Updated: 2024/01/16 11:40:27 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	j = len_dst;
 	while (src[i] != '\0' && i + len_dst < size - 1)
 	{
-		((char *)dest)[j] = ((char *)src)[i];
+		dest[j] = src[i];
 		i++;
 		j++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slouham <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: slouham <slouham@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:03:21 by slouham           #+#    #+#             */
-/*   Updated: 2023/12/19 17:08:13 by slouham          ###   ########.fr       */
+/*   Updated: 2024/01/16 11:45:28 by slouham          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ static int	int_len(long int n)
 		counter++;
 		n /= 10;
 	}
-	if (n < 10)
-		counter++;
+	counter++;
 	return (counter);
 }
 
